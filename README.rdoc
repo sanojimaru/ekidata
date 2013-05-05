@@ -1,3 +1,22 @@
-= Ekidata
+= ekidata-rails
 
-This project rocks and uses MIT-LICENSE.
+駅データ.jp[http://www.ekidata.jp/]のデータをRailsで簡単に扱うためのプラグイン。
+RailsEngineのPluginを作る練習として実用的かなと思った。
+
+== How to use
+
+(1) Gemfileに追加
+
+  # Gemfile
+  gem 'ekidata'
+
+(2) インストール
+
+  $ bundle install
+  $ bundle exec rake ekidata:install:migrations
+
+(3) データを用意
+
+会員登録が必要なのと、データのメンテナンスが面倒なので、
+データは 駅データ.jp[http://www.ekidata.jp/] から自前でダウンロードしてください。
+
