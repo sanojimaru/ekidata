@@ -1,0 +1,5 @@
+require 'rubygems'
+require 'activerecord-import'
+require 'csv'
+require 'ekidata/engine'
+require 'ekidata/import/stations'
