@@ -4,11 +4,11 @@ class CreateEkidataLines < ActiveRecord::Migration
       t.integer :code, :null => false
       t.integer :company_code, :null => false
       t.string :name, :null => false
-      t.string :name_kana
-      t.string :name_formal
-      t.string :color_code, :length => 6
-      t.string :color_name, :length => 10
-      t.integer :line_type, :length => 1
+      t.string :name_k
+      t.string :name_h
+      t.string :color_code
+      t.string :color_name
+      t.integer :line_type
       t.integer :google_map_zoom
       t.integer :status
       t.integer :sort
