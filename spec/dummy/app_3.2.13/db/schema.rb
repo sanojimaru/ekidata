@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130505151736) do
+ActiveRecord::Schema.define(:version => 20130505160916) do
 
-  create_table "ekidata_rails_ekidata_stations", :force => true do |t|
+  create_table "ekidata_stations", :force => true do |t|
     t.integer  "code",        :null => false
     t.integer  "group_code",  :null => false
     t.string   "name",        :null => false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20130505151736) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "ekidata_rails_ekidata_stations", ["code"], :name => "index_ekidata_rails_ekidata_stations_on_code", :unique => true
-  add_index "ekidata_rails_ekidata_stations", ["line_code"], :name => "index_ekidata_rails_ekidata_stations_on_line_code"
+  add_index "ekidata_stations", ["code"], :name => "index_ekidata_stations_on_code", :unique => true
+  add_index "ekidata_stations", ["line_code"], :name => "index_ekidata_stations_on_line_code"
 
 end

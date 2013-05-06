@@ -1,7 +1,7 @@
 PATH
-  remote: /Users/sanojimaru/workspace/rails32/ekidata-rails
+  remote: /Users/sanojimaru/workspace/rails32/ekidata
   specs:
-    ekidata-rails (0.0.1)
+    ekidata (0.0.1)
       activerecord-import
       rails (~> 3.2.13)
 
@@ -127,7 +127,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  ekidata-rails!
+  ekidata!
   jquery-rails
   rails (= 3.2.13)
   rspec-rails
