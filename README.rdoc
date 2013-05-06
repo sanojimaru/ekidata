@@ -20,3 +20,17 @@ RailsEngineのPluginを作る練習として実用的かなと思った。
 会員登録が必要なのと、データのメンテナンスが面倒なので、
 データは 駅データ.jp[http://www.ekidata.jp/] から自前でダウンロードしてください。
 
+(4) 使い方
+
+ダウンロードして用意したデータを引数に実行します。
+
+    rake ekidata:import:all \
+    COMPANY_CSV=db/ekidata/company20130120.csv \
+    JOIN_CSV=db/ekidata/join20130404.csv \
+    LINE_CSV=db/ekidata/line20130430free.csv \
+    STATION_CSV=db/ekidata/station20130404free.csv
+
+== Copyright
+
+Copyright © 2013 Hirohide Sano. See MIT-LICENSE for further details.
+
