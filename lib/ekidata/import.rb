@@ -5,18 +5,16 @@ module Ekidata
     def from_csv
       if ENV[@env_name].present?
         model = @model_name.classify.constantize
-        puts model
-        CSV.open ENV[@env_name] do |csv|
-          rows = csv.map do |row|
-            model.new Hash[@headers.zip row.to_a]
-          end
 
-          puts rows.last.attributes
+        rows = []
+        CSV.open(ENV[@env_name], 'r').each_with_index do |row, i|
+            next if i == 0
+            rows << model.new(Hash[@headers.zip row.to_a])
+        end
 
-          ActiveRecord::Base.transaction do
-            model.delete_all
-            model.import rows
-          end
+        ActiveRecord::Base.transaction do
+          model.delete_all
+          model.import rows, on_duplicate_key_update: false
         end
       else
         puts "Specify #{@env_name} arguments."
